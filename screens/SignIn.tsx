@@ -41,12 +41,13 @@ const SignIn = ({ navigation }: SignInScreen) => {
                     <View>
 
                         <AppText
-                            style={apptw`text-3xl text-center text-primary`}>
-                            Welcome Back
+                            style={apptw`text-3xl text-center text-black`}>
+                            Hello Dr!
                         </AppText>
                         <AppText
-                            style={apptw`text-lg text-center text-specpurple`}>
-                            Login and Resume your Anti-Social Adventure
+                            style={apptw`text-lg text-center `}>
+                            Fill your details or continue with
+                            social media
                         </AppText>
 
 
@@ -66,25 +67,27 @@ const SignIn = ({ navigation }: SignInScreen) => {
                             isPassword={true}
                         />
 
+                        <View>
+                            <PressAppText
+                                // onPress={navigatetoForgotPassword}
+                                style={apptw`text-black `}
+                            >
+                                Forgot Password?
+                            </PressAppText>
+                        </View>
 
-                        <PressAppText
-                            // onPress={navigatetoForgotPassword}
-                            style={apptw`text-primary `}
-                        >
-                            Forgot Password?
-                        </PressAppText>
-
-
-
-                    </View>
-                    <View style={apptw`mb-19`}>
                         <AppButton
                             buttonStyle={apptw`  my-6`}
                             // text={isButtonLoading ? "Loading..." : "Sign In"}
                             onPress={navigatetoDashBoard}
-                        text="Sign In"
+                            text="Sign In"
 
                         />
+
+
+                    </View>
+                    <View style={apptw`mb-19`}>
+
 
 
 
@@ -95,7 +98,7 @@ const SignIn = ({ navigation }: SignInScreen) => {
                             <PressAppText
                                 onPress={navigateToSignUp}
                                 style={apptw`text-primary top-[1]  `}>
-                                Sign Up
+                                Register
                             </PressAppText>
 
 

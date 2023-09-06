@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native"
+import { Pressable, ScrollView, View, Image, Text, StyleSheet } from "react-native"
 import AppButton from "../components/Display/AppButton"
 import AppText from "../components/Display/AppText"
 import PressAppText from "../components/Display/PressAppText"
@@ -11,9 +11,10 @@ import { RootStackParamList } from "./allroutes"
 
 import { useForm } from "react-hook-form"
 
-
+import Checkbox from 'expo-checkbox';
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { FontAwesome } from "@expo/vector-icons"
 
 
 
@@ -33,20 +34,18 @@ const SignUp = ({ navigation }: SignUpScreen) => {
         navigation.navigate("SignIn")
     }
 
+    const [isChecked, setChecked] = useState(false);
 
 
-   
 
-    
+
 
     return (
         <BasicBackButtonLayout>
             <>
-                <View>
 
-                </View>
                 <ScrollView
-                    style={tw`px-5 mt-5`}
+                    style={tw`px-5 `}
                     contentContainerStyle={tw.style(` justify-between`, {
                         flexGrow: 1,
                     })}
@@ -54,54 +53,135 @@ const SignUp = ({ navigation }: SignUpScreen) => {
                     <View>
 
                         <AppText
-                            style={apptw`text-3xl text-center text-primary`}>
-                            Sign Up
+                            style={apptw`text-3xl text-center text-black`}>
+                            Register Account
                         </AppText>
                         <AppText
-                            style={apptw`text-lg text-center text-specpurple pb-5`}>
-                            Let's begin your Anti-Social Adventure
+                            style={apptw`text-lg text-center  pb-5`}>
+                            Fill your details or continue with
+                            social media
                         </AppText>
 
 
                         <AppTextField
-                            title="Username"
-
-
+                            title="Firstname"
                             validationName="userName"
-                            placeholder="username"
+                            placeholder="Firstname"
+                        />
+
+                        <AppTextField
+                            title="Firstname"
+                            validationName="userName"
+                            placeholder="lastname"
                         />
 
                         <AppTextField
                             title="Email"
-
-
                             validationName="email"
-                            placeholder="email"
+                            placeholder="example@gmail.com"
                         />
 
                         <AppTextField
                             title="Password"
-
                             validationName="password"
-
                             placeholder="***********"
                             isPassword={true}
                         />
 
+                        <View
+                            style={apptw`flex-row`}
+                        >
+                            <Checkbox
+                                style={apptw``}
+                                value={isChecked}
+                                onValueChange={setChecked}
+                                color={isChecked ? '#4630EB' : undefined}
+                            />
+                            <AppText>
 
+                                I accept all the Terms & Conditions
+                            </AppText>
+                        </View>
 
 
                     </View>
+
+
+
+
+
                     <View style={apptw`mb-19`}>
+
+
+
+
                         <AppButton
                             buttonStyle={apptw`  my-6`}
-                            text={isButtonLoading ? "Loading..." : "Create Account"}
+                            text={isButtonLoading ? "Loading..." : "Register"}
                             onPress={navigateToSignIn}
                         // text="Create Account"
 
                         />
 
 
+                        <View
+                            style={apptw`flex-row justify-between items-center mb-3`}
+                        >
+                            <View
+                                style={{
+                                    borderBlockColor: "gray",
+                                    borderBottomWidth: 1,
+                                    width: 100,
+                                    paddingBottom: 10
+                                }}
+                            />
+                            <AppText style={apptw`font-bold pt-2 mx-2 mx-auto`}>
+
+                                Or sign in with
+                            </AppText>
+                            <View
+                                style={{
+                                    borderBlockColor: "gray",
+                                    borderBottomWidth: 1,
+                                    width: 100,
+                                    paddingBottom: 10
+                                }}
+                            />
+                        </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <View>
+                            <Pressable>
+
+                                <View style={apptw`rounded-lg bg-white flex-row justify-center items-center py-3`}>
+
+
+                                    <Image
+                                        source={require("../assets/google_logo.png")}
+                                        style={apptw`mx-0 px-0`}
+                                    />
+                                    <AppText style={apptw`font-bold pt-0 mx-0`}>
+
+
+                                        {" "} Sign Up with Google
+                                    </AppText>
+                                </View>
+
+
+                            </Pressable>
+
+                        </View>
 
                         <AppText style={apptw`self-center text-zinc-400 text-[4]`}>
                             Already have an account?{' '}

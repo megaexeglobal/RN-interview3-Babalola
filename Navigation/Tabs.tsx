@@ -1,4 +1,4 @@
-import { MaterialCommunityIcons, AntDesign, MaterialIcons, Ionicons, Octicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, AntDesign, MaterialIcons, Ionicons, Octicons, Feather } from "@expo/vector-icons";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import apptw from "../utils/lib/tailwind";
@@ -16,9 +16,10 @@ const Tabs = () => {
         <Tab.Navigator
 
             screenOptions={{
-                tabBarStyle: { backgroundColor: "#BAC0FA" },
+                tabBarStyle: { backgroundColor: "white" },
                 tabBarInactiveTintColor: "black",
                 // tabBarShowLabel: false,
+                tabBarActiveBackgroundColor:"#4425F51A",
                 headerShown: false,
                 tabBarActiveTintColor: "#0413BB"
             }}
@@ -26,13 +27,13 @@ const Tabs = () => {
         >
 
             <Tab.Screen
-                name='DashBoard'
+                name='Home'
                 component={DashBoardScreen}
                 options={{
 
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialIcons
-                            name="dashboard"
+                        <Feather
+                            name="home"
                             color={color}
                             size={26} />
                     ),

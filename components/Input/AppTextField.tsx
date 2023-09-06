@@ -89,13 +89,9 @@ const AppTextField = (props: AppTextFieldProps) => {
 
     return (
         <TextContainer containerStyle={props.containerStyle}>
-            <AppText style={apptw`text-base`} 
-            // fontFamily="poppins-semibd"
-            >
-                {props?.title}
-            </AppText>
+        
             <View
-                style={apptw`h-[18] w-full bg-specpurple mt-2 rounded-md flex items-center justify-between p-4 border-2 flex-row ${
+                style={apptw`h-[18] w-full bg-white mt-2 rounded-2xl flex items-center justify-between p-4 border-2 flex-row ${
                     props.errorMessage
                         ? " border-red-700"
                         : "border-transparent"

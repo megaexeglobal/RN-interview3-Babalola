@@ -4,9 +4,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: "#BC4B52",
-                secondary: "#54AC52",
-                textField: "rgba(241, 241, 241, 1)",
+                primary: "#4425F5",
+                secondary: "#F6F8FA",
+                textField: "#F1F1F1",
             },
         },
     },

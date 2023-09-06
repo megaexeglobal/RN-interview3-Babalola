@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { Keyboard, Platform, Pressable, SafeAreaView, TouchableWithoutFeedback, View, Text, ScrollView } from "react-native";
 import tw from "twrnc";
-import { SimpleLineIcons } from "@expo/vector-icons"
+import { AntDesign, SimpleLineIcons } from "@expo/vector-icons"
 import apptw from "../../utils/lib/tailwind";
 
 
@@ -20,13 +20,12 @@ const LoggedInLayout = ({ children }: LoggedInLayoutProp) => {
         >
 
             <ScrollView
-                 style={apptw.style(`bg-white  flex-1 shadow-md py-6 pt-10 pb-5`)}
-                 contentContainerStyle={apptw`flex-grow`}
-            
-                // edges={["top", "left", "right", "bottom"]}
-            >
+                style={apptw.style(`bg-white  flex-1 shadow-md py-6 pt-15 pb-5`)}
+                contentContainerStyle={apptw`flex-grow`}
 
-              
+            // edges={["top", "left", "right", "bottom"]}
+            >
+                
 
 
                 {children}

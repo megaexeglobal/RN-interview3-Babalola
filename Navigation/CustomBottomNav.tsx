@@ -11,7 +11,7 @@ function MyTabBar({ state, descriptors, navigation }: TabBarProps) {
   return (
     <View style={{
       flexDirection: 'row',
-      backgroundColor: "#BAC0FA",
+      backgroundColor: "white",
       height: 70,
       borderRadius: 0,
       justifyContent: 'center',
