@@ -32,6 +32,7 @@ function AppNavB() {
   )
 }
 
+const Stack = createNativeStackNavigator();
 
 
 
@@ -43,19 +44,19 @@ export default function App() {
 
   return (
 
-    // <SafeAreaProvider>
-    //   <StatusBar />
 
 
-      <NavigationContainer>
+    <NavigationContainer>
 
-        <AuthStack />
-        {/* <AppStack /> */}
-      </NavigationContainer>
+      {/* <AppStack /> */}
+
+      <AuthStack />
+
+    </NavigationContainer>
 
 
 
-    // </SafeAreaProvider>
+
   );
 }
 

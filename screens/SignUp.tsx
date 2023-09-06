@@ -112,9 +112,6 @@ const SignUp = ({ navigation }: SignUpScreen) => {
 
                     <View style={apptw`mb-19`}>
 
-
-
-
                         <AppButton
                             buttonStyle={apptw`  my-6`}
                             text={isButtonLoading ? "Loading..." : "Register"}
