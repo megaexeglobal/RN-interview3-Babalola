@@ -24,12 +24,12 @@ const InfoCarousel2 = () => {
                             style={apptw`mx-5 my-5   w-20 bg-purple-400 flex-col rounded-lg px-5 py-3`}
                         >
                             <AppText
-                                style={apptw`text-white text-3`}
+                                style={apptw`text-white text-3 text-center`}
                             >
                                 29
                             </AppText>
                             <AppText
-                                style={apptw`text-white text-3 `}
+                                style={apptw`text-white text-3  text-center`}
                             >
                                 Tue
                             </AppText>
@@ -40,7 +40,7 @@ const InfoCarousel2 = () => {
                                 }}
                             />
                             <AppText
-                                style={apptw`text-white text-3`}
+                                style={apptw`text-white text-3 text-center`}
                             >
                                 2:00 PM
                             </AppText>
@@ -94,18 +94,18 @@ const InfoCarousel2 = () => {
                     style={apptw``}
                 >
                     <View
-                        style={apptw`bg-purple-800 h-40 rounded-xl  flex-row `}
+                        style={apptw`bg-orange-400 h-40 rounded-xl  flex-row `}
                     >
                         <View
-                            style={apptw`mx-5 my-5   w-20 bg-purple-400 flex-col rounded-lg px-5 py-3`}
+                            style={apptw`mx-5 my-5   w-20 bg-orange-200 flex-col rounded-lg px-5 py-3`}
                         >
                             <AppText
-                                style={apptw`text-white text-3`}
+                                style={apptw`text-white text-3 text-center`}
                             >
                                 29
                             </AppText>
                             <AppText
-                                style={apptw`text-white text-3 `}
+                                style={apptw`text-white text-3 text-center `}
                             >
                                 Tue
                             </AppText>
@@ -116,7 +116,7 @@ const InfoCarousel2 = () => {
                                 }}
                             />
                             <AppText
-                                style={apptw`text-white text-3`}
+                                style={apptw`text-white text-3  text-center`}
                             >
                                 2:00 PM
                             </AppText>

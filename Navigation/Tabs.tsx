@@ -1,10 +1,14 @@
-import { MaterialCommunityIcons, AntDesign, MaterialIcons, Ionicons, Octicons, Feather } from "@expo/vector-icons";
+import { MaterialCommunityIcons, AntDesign, MaterialIcons, Ionicons, Octicons, Feather, Entypo } from "@expo/vector-icons";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import apptw from "../utils/lib/tailwind";
 import MyTabBar from "./CustomBottomNav";
 import DashBoardScreen from "../screens/DashBoard/DashBoardScreen";
 import Test from "../screens/Tests/Test";
+import ShopScreen from "../screens/Shop/ShopScreen";
+import PlannerScreen from "../screens/Planner/PlannerScreen";
+import GroupScreen from "../screens/Group/GroupScreen";
+import PersonalScreen from "../screens/Personal/PersonalScreen";
 
 
 
@@ -19,7 +23,7 @@ const Tabs = () => {
                 tabBarStyle: { backgroundColor: "white" },
                 tabBarInactiveTintColor: "black",
                 // tabBarShowLabel: false,
-                tabBarActiveBackgroundColor:"#4425F51A",
+                tabBarActiveBackgroundColor: "#4425F51A",
                 headerShown: false,
                 tabBarActiveTintColor: "#0413BB"
             }}
@@ -41,20 +45,49 @@ const Tabs = () => {
             />
 
 
-            < Tab.Screen
-                name='Journal'
-                component={Test}
+            <Tab.Screen
+                name="Planner"
+                component={PlannerScreen}
                 options={{
                     tabBarIcon: ({ color }) => (
-                        <Ionicons name="journal"
-                            color={color}
-                            size={26} />
+                        <AntDesign name="calendar" size={24} color={color} />),
+                }}
+            />
+
+            <Tab.Screen
+                name="Group"
+                component={GroupScreen}
+                options={{
+                    tabBarIcon: ({ color }) => (
+                        <Ionicons name="people-outline" size={24} color={color} />),
+                }}
+            />
+
+            < Tab.Screen
+                name='Shop'
+                component={ShopScreen}
+                options={{
+                    tabBarIcon: ({ color }) => (
+                        <Entypo name="shop" size={24} color={color} />
                     ),
                 }}
             />
 
 
-           
+
+
+
+
+            <Tab.Screen
+                name="Personal"
+                component={PersonalScreen}
+                options={{
+                    tabBarIcon: ({ color }) => (
+                        <Ionicons name="person-outline" size={24} color={color} />),
+                }}
+            />
+
+
 
 
 

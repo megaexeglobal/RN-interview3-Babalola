@@ -4,8 +4,15 @@ import { RollInRight } from "react-native-reanimated";
 import AppText from "../components/Display/AppText";
 import apptw from "../utils/lib/tailwind";
 import { SimpleLineIcons } from "@expo/vector-icons";
+import { Pressable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function CustomDrawer(props: any) {
+
+
+    const navigation = useNavigation()
+
+
     return (
 
         <View
@@ -37,7 +44,7 @@ export default function CustomDrawer(props: any) {
                         }}
                     />
                     <View
-                        style={apptw`flexDirection: "column" mx-5 `}
+                        style={apptw` mx-5 `}
                     >
                         <AppText
                             style={apptw`text-5 text-white `}
@@ -62,7 +69,8 @@ export default function CustomDrawer(props: any) {
                 </View>
 
 
-                <View
+                <Pressable
+                onPress={()=>navigation.navigate("SignIn")}
                     style={apptw`bg-white flex-row px-5 pt-5`}
                 >
                     <SimpleLineIcons name="logout" size={24} color="black" />
@@ -71,7 +79,7 @@ export default function CustomDrawer(props: any) {
                     >
                         Logout
                     </AppText>
-                </View>
+                </Pressable>
             </DrawerContentScrollView>
 
 

@@ -10,4 +10,7 @@ export type RootStackParamList = {
     TrackOrderScreen: undefined
     WalletScreen: undefined
     SettingsScreen: undefined
+    ShopScreen: undefined
+    PlannerScreen: undefined
+    GroupScreen: undefined
 }

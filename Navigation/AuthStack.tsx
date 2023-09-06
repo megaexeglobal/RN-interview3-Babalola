@@ -32,7 +32,7 @@ const AuthStack = () => {
             />
             <Stack.Screen
                 name="DashBoardScreen"
-                component={AppStack}
+                component={AppStack }
             />
 
         </Stack.Navigator>

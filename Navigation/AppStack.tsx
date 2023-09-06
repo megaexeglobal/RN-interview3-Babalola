@@ -18,6 +18,7 @@ const AppStack = () => {
     return (
         <Drawer.Navigator
             initialRouteName="DashBoard"
+
             screenOptions={{
                 drawerLabelStyle: {
                     fontSize: 15,

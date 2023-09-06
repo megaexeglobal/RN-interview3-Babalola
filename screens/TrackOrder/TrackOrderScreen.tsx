@@ -2,6 +2,7 @@ import { KeyboardAvoidingView, Platform, ScrollView, View } from "react-native";
 import LoggedLayout from "../../components/Layout/LoggedLayout";
 import apptw from "../../utils/lib/tailwind";
 import AppText from "../../components/Display/AppText";
+import BasicBackButtonLayout from "../../components/Layout/BasicBackButtonLayout";
 
 
 
@@ -12,7 +13,7 @@ export default function TrackOrderScreen() {
             style={apptw` flex-1`}
             behavior={Platform.OS === "ios" ? "padding" : "height"}
         >
-            <LoggedLayout>
+            <BasicBackButtonLayout>
                 <ScrollView
                     showsVerticalScrollIndicator={true}
                     style={apptw`px-6`}
@@ -21,14 +22,13 @@ export default function TrackOrderScreen() {
                     })}>
 
 
-                    <AppText>
-
-                        Wallet
-                    </AppText>
+                    <View >
+                        <AppText style={apptw`text-center text-2xl`}>Track Order</AppText>
+                    </View>
 
 
                 </ScrollView>
-            </LoggedLayout>
+            </BasicBackButtonLayout>
         </KeyboardAvoidingView>
     )
 }
